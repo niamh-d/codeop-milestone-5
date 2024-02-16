@@ -1,7 +1,8 @@
 {
-  "name": "codeop-milestone-5",
+  "name": "testweekfive",
   "version": "0.0.0",
-  "author": "Niamh Doyle",
+  "author": "Germinal Camps for CodeOp",
+  "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
     "migrate": "node model/database"
