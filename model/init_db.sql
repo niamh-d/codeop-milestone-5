@@ -35,7 +35,7 @@ VALUES
     ('Gale', 'Vasquez', 20020511, 'French 201', 'O', 'uus', 0),
     ('Erik', 'Reppo', 20001205, 'Python 101', 'M', 'tee', 0),
     ('Patrice', 'Mcneil', 20020903, 'Python 101', 'F', 'qqe', 0),
-    ('Susana', 'Calzada', 20000403, 'Python 101', 'F', 'fff', 0),
+    ('Susana', 'Calzada', 20000403, 'Python 101', 'F', 'bbb', 0),
     ('Tania', 'Cunningham', 19981003, 'Creative Writing 101', 'N', 'iaa', 1),
     ('Beverly', 'Patterson', 19980804, 'Creative Writing 101', 'F', 'iii', 0),
     ('Claus', 'Weimann', 19971003, 'Creative Writing 101', 'M', 'wey', 0),
@@ -44,4 +44,4 @@ VALUES
     ('Marietta', 'Diaz', 20011207, 'Danish 101', 'F', 'sap', 0),
     ('Ali', 'Weber', 20010203, 'Danish 101', 'F', 'gfz', 0),
     ('Remigio', 'Teran', 19981103, 'Danish 101', 'M', 'aau', 1),
-    ('Sarah', 'Shore', 19991023, 'Danish 101', 'N', 'wex', 0);
+    ('Stefan', 'Shore', 19991023, 'Danish 101', 'N', 'wex', 0);

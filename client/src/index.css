@@ -4,11 +4,11 @@
 
 @layer base {
   body {
-    @apply p-10;
+    @apply p-5;
   }
 
   header {
-    @apply p-5 m-5;
+    @apply p-5 mb-10;
   }
   h1 {
     @apply text-4xl font-bold mb-5;

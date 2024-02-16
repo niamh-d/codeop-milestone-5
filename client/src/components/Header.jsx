@@ -2,9 +2,9 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div>
-      <h1>CodeOp's Facebook</h1>
-    </div>
+    <header>
+      <h1>Student Records</h1>
+    </header>
   );
 };
 

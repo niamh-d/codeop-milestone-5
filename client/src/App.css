@@ -1,51 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.app {
+  max-width: 100rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-@layer components {
-  .app {
-    max-width: 70rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.courses-view {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
 
-  .stats-view {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 5rem;
-  }
+.courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-  .tasks-container {
-    padding: 3rem 3rem 3rem 0;
-  }
-
-  .task-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .task {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 2rem;
-    width: 80%;
-  }
-
-  .icons-box {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .theme-selector {
-    position: fixed;
-    top: 2rem;
-    right: 10rem;
-    margin: 1rem;
-    padding: 0.5rem;
-    line-height: 1;
-    font-size: 0.8rem;
-    border: solid 1px;
-    border-radius: 10px;
-  }
+.student-profile {
+  border: solid white 2px;
+  border-radius: 10px;
 }

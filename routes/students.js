@@ -12,8 +12,15 @@ router.get("/", function(req, res, next) {
 });
 
 // GET one student
-router.get("/:id", function(req, res, next) {
-  //your code here
+router.get("/:id", async function(req, res, next) {
+  try {
+    const id = req.params.id;
+    const result = await db(`SELECT * FROM students WHERE id = ${id};`);
+
+    res.send(result.data[0]);
+  } catch (err) {
+    res.status(500).send(err);
+  }
 });
 
 // INSERT a new student into the DB
