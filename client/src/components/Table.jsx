@@ -5,9 +5,10 @@ import StudentTableRow from "./StudentTableRow";
 const Table = ({ students }) => {
   return (
     <div className="overflow-x-auto">
-      <table className="table table-zebra">
-        <thead>
+      <table className="table table-zebra text-lg">
+        <thead className="text-lg">
           <tr>
+            <th>Student ID</th>
             <th>First Name</th>
             <th>Surname</th>
             <th>Course</th>

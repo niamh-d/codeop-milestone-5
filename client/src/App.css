@@ -4,17 +4,30 @@
   margin-right: auto;
 }
 
-.courses-view {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
 .courses {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 3rem;
+  padding: 5rem;
+  gap: 3rem;
 }
 
-.student-profile {
-  border: solid white 2px;
+.person-profile {
+  overflow: hidden;
+  position: relative;
   border-radius: 10px;
+  max-width: 25rem;
+}
+
+.person-profile img {
+  border-radius: 10px;
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.profile-close-box {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
 }

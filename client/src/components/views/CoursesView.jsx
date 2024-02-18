@@ -1,25 +1,69 @@
 import React from "react";
 
 import Course from "../Course";
+import AddNewStudentForm from "../AddNewStudentForm";
 import { useStudents } from "../../contexts/StudentsContext";
-import StudentProfile from "../../components/StudentProfile";
+import PersonProfile from "../../components/PersonProfile";
+import DeleteModal from "../DeleteModal";
+import InfoModal from "../InfoModal";
 
 const CoursesView = () => {
-  const { studentsArr, profiledStudent } = useStudents();
+  const {
+    showForm,
+    studentsArr,
+    profiledPerson,
+    dispatch,
+    displayedCourse,
+    coursesArr,
+    displayedTutor,
+    removedStudent,
+    addedStudent
+  } = useStudents();
 
-  const courses = Array.from(
-    new Set(studentsArr.map(student => student.course))
+  const selectedStudentList = studentsArr.filter(
+    student => student.course === displayedCourse
   );
 
+  const setCourseHandler = course =>
+    dispatch({ type: "SET_DISPLAYED_COURSE", payload: course });
+
   return (
-    <div className="courses-view">
-      <div className="courses">
-        {courses.map(course => (
-          <Course students={studentsArr} course={course} key={course} />
-        ))}
+    <>
+      <DeleteModal />
+      <InfoModal dispatch={dispatch} student={removedStudent} type="delete" />
+      <InfoModal dispatch={dispatch} student={addedStudent} type="add" />
+
+      <div className="mt-10">
+        <div className="flex gap-6">
+          {coursesArr.map(course => (
+            <div
+              className={`cursor-pointer badge badge-${
+                course.title === displayedCourse ? "neutral" : "secondary"
+              } text-xl p-5`}
+              key={course.title}
+              onClick={() => setCourseHandler(course.title)}
+            >
+              {course.title}
+            </div>
+          ))}
+        </div>
+
+        <div className="courses">
+          <Course
+            students={selectedStudentList}
+            course={displayedCourse}
+            tutor={displayedTutor}
+          />
+          {profiledPerson && (
+            <PersonProfile
+              profiledPerson={profiledPerson}
+              dispatch={dispatch}
+            />
+          )}
+          {showForm && <AddNewStudentForm />}
+        </div>
       </div>
-      {profiledStudent && <StudentProfile profiledStudent={profiledStudent} />}
-    </div>
+    </>
   );
 };
 

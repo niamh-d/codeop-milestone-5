@@ -1,12 +1,12 @@
 import React from "react";
 
-import StudentList from "./StudentList";
+import CourseList from "./CourseList";
 
-const Course = ({ students, course }) => {
+const Course = ({ students, course, tutor }) => {
   return (
     <div>
-      <h2 className="mb-3 mt-10 text-xl font-bold">{course}</h2>
-      <StudentList students={students} course={course} />
+      <h2 className="mb-3 mt-10 text-3xl font-bold">{course}</h2>
+      <CourseList students={students} tutor={tutor} />
     </div>
   );
 };

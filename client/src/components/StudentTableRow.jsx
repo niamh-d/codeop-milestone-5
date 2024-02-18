@@ -1,7 +1,15 @@
 import React from "react";
 
 const StudentTableRow = ({ student }) => {
-  const { firstName, lastName, course, sex, scholarship, dob } = student;
+  const {
+    stringId,
+    firstName,
+    lastName,
+    course,
+    sex,
+    scholarship,
+    dob
+  } = student;
 
   const scholarshipStr = scholarship ? "Yes" : "No";
 
@@ -20,12 +28,17 @@ const StudentTableRow = ({ student }) => {
 
   return (
     <tr>
-      <th>{firstName}</th>
-      <th>{lastName}</th>
-      <th>{course}</th>
-      <th>{sexStrRender(sex)}</th>
-      <th>{dateStrRender(dob)}</th>
-      <th>{scholarshipStr}</th>
+      <th className="font-thin tracking-widest">{stringId}</th>
+      <th className="font-normal">{firstName}</th>
+      <th className="uppercase tracking-wider">{lastName}</th>
+      <th className="font-normal">{course}</th>
+      <th className="font-thin">{sexStrRender(sex)}</th>
+      <th className="font-normal">{dateStrRender(dob)}</th>
+      <th
+        className={`${scholarship ? "font-semibold uppercase" : "font-normal"}`}
+      >
+        {scholarshipStr}
+      </th>
     </tr>
   );
 };

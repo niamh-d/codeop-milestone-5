@@ -6,6 +6,8 @@ var logger = require("morgan");
 var cors = require("cors");
 
 var studentsRouter = require("./routes/students");
+var coursesRouter = require("./routes/courses");
+var tutorsRouter = require("./routes/tutors");
 
 var app = express();
 
@@ -19,6 +21,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "client/build")));
 
 app.use("/api/students", studentsRouter);
+app.use("/api/courses", coursesRouter);
+app.use("/api/tutors", tutorsRouter);
 
 // Anything that doesn't match the above, send back index.html
 app.get("*", (req, res) => {
